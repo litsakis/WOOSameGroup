@@ -1,7 +1,7 @@
 function SameGroup_products(){
 	
 	
-	//create the options
+	//init numbers
 	$limit = "12";
 	$cols = "4";
 	
@@ -123,3 +123,5 @@ $product_ids = $wpdb->get_col( $tmpqry);
 		 
 	echo '</table></section>';}}}
 	
+
+add_action( 'woocommerce_single_product_summary', 'SameGroup_products', 12 );
